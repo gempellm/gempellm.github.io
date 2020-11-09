@@ -1,35 +1,316 @@
-/* Split the screen in half */
-.split {
-  height: 100%;
-  width: 70%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
+* {
+  font-family: 'Barlow', sans-serif;
 }
 
-/* Control the left side */
-.left {
-  left: 0;
+body {
+  transform: scale(0.9);
+  height: auto;
+  width: 100%;
+  display: block;
+  background-color: #EFF6FF;
+  overflow: auto;
 }
 
-/* Control the right side */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: #3698FB;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+@media (min-width: 1200px) {
+  .left {
+    flex: 1;
+    width: 55%; 
+    float: left;
+    background-image: url('./img/bg.jpg');
+    background-size: cover;
+    display: block;
+    min-height: 1000px;
+    background-position: center center;
+  }
+
+  .right {
+    width: 45% !important;
+  }
+
+  .logo {
+    display: block !important;
+  }
+}
+
+.container {
+  height: auto;
+  display: flex;
+}
+
 .right {
-  right: 0;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+  background-color: #FFFFFF;
+  width: 100%; 
+  float: right;
+  height: auto;
+  padding: 110px 60px 90px 70px;
+  -moz-box-shadow: 12px 12px 2px 1px rgba(238, 238, 238, 0.2);
+  -webkit-box-shadow: 12px 12px 2px 1px rgba(238, 238, 238, 0.2);
+  box-shadow: 12px 12px 2px 1px rgba(238, 238, 238, 0.2);
 }
 
-/* If you want the content centered horizontally and vertically */
-.centered {
+.logo {
+  padding: 45px;
+  display: none;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+}
+
+.title h2 {
+  color: #2A4A5C;
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+.title h3 {
+  color: #7B8A92;
+}
+
+.outer-registration {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  box-sizing: border-box;
+} 
+
+.outer-registration li {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.outer-button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  flex-grow: 1;
+  padding-right: 30px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.facebook {
+  background-color: #255A9B;
+}
+
+.linkedin {
+  background-color: #0076B6;
+}
+
+.outer-logo {
+  margin-right: 20px;
+}
+
+.or-break {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0 50px 0;
+}
+
+.or {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.or::before,
+.or::after {
+    display: inline-block;
+    content: "";
+    border-top: 1.5px solid#EEEEEE;
+    width: 6rem;
+    margin: 0 0.5rem;
+    transform: translateY(-0.2rem);
+}
+
+.form-group {
+  position: relative;
+  width: 100%;
+}
+
+.input-text {
+  width: 100%;
+  height: 60px;
+  border: 1px solid #EEEEEE;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-right: 50px;
+}
+
+.input-text:focus {
+  outline: none;
+  border-left: 2px solid #3698FB;
+}
+
+.input-label {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  font-size: 0.9em;
+  top: 5px;
+  left: 10px;
+  color: #7B8A92;
+  font-weight: bold;
 }
 
-/* Style the image inside the centered container, if needed */
-.centered img {
-  width: 150px;
+.left-item {
+  border-right: 15px solid transparent;
+}
+
+
+.right-item {
+  border-left: 15px solid transparent;
+}
+
+.checkbox-title {
+  margin-top: 50px;
+}
+
+.checkbox-title h3 {
+  color:  #2A4A5C;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 0;
+}
+
+.checkbox-title p {
+  margin-top: 10px;
+  color: #7B8A92;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.investors {
+  margin-bottom: 100px;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.invest-type {
+  display: flex;
+  align-items: center;
+}
+
+input[type='radio'] {
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+input[type='radio'] + *::before {
+  content: "";
+  display: inline-block;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  border: 1px solid #AFAFAF;
   border-radius: 50%;
+  vertical-align: bottom;
+}
+
+input[type='radio']:checked + *::before {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border: 5px solid #3698FB !important;
+  border-radius: 50%;
+}
+
+.invest-label {
+  color: #2A4A5C;
+  font-weight: bold;
+}
+
+.i {
+  margin-left: 10px;
+  width: 12px;
+  padding-top: 2px;
+  margin-right: 10px;
+}
+
+.i:hover {
+  cursor: pointer;
+}
+
+.popover {
+  transition: visibility 1s linear
+}
+
+.i + .popover {
+  visibility: hidden;
+  position: absolute;
+  margin-top: 120px;
+  margin-left: 10px;
+  width: 220px;
+  font-size: 0.8rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  color: #7B8A92;
+  padding: 10px;
+}
+
+.i:hover + .popover  {
+  visibility: visible;
+}
+
+.agree {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  color: #AFAFAF;
+  font-size: 0.9rem;
+}
+
+input[type='checkbox'] {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.create {
+  width: 250px;
+  height: 40px;
+  background-color: #3698FB;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.create:focus {
+  outline: none;
 }
