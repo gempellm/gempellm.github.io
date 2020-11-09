@@ -146,8 +146,8 @@ a {
 .or::after {
     display: inline-block;
     content: "";
-    border-top: 1.5px solid#EEEEEE;
-    width: 6rem;
+    border-top: 2px solid#EEEEEE;
+    width: 8rem;
     margin: 0 0.5rem;
     transform: translateY(-0.2rem);
 }
