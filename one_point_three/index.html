@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-        <meta charset="windows-1251">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="CPS - ремонт техники Dell"/>
         <title>CPS</title>
@@ -10,63 +10,83 @@
     <body>
         <header>
             <nav>
-                <ul>
-                    <li>
-                        <img alt="menu">
+                <ul class="header-menu">
+                    <li class="header-menu__burger">
+                        <img src="icons/burger.svg" alt="burger">
                     </li>
-                    <li>
-                        <img alt="logo">
+                    <li class="header-menu__divider2">
+                        <img src="icons/divider.svg" alt="divider">
                     </li>
-                    <li>
-                        <img alt="call">
+                    <li class="header-menu__logo">
+                        <img src="icons/logo.svg" alt="logo">
                     </li>
-                    <li>
-                        <img alt="message">
+                    <li class="header-menu__divider1">
+                        <img src="icons/divider.svg" alt="divider">
                     </li>
-                    <li>
-                        <img alt="profile">
+                    <li class="header-menu__call">
+                        <img src="icons/call.svg" alt="call">
                     </li>
-                    <li>
-                        <img alt="оставить заявку">
+                    <li class="header-menu__chat">
+                        <img src="icons/chat.svg" alt="message">
                     </li>
-                    <li>
-                        <img alt="статус ремонта">
+                    <li class="header-menu__profile">
+                        <img src="icons/profile.svg" alt="profile">
+                    </li>
+                    <li class="header-menu__divider3">
+                        <img src="icons/divider.svg" alt="divider">
+                    </li>
+                    <li class="header-menu__repair-status">
+                        <img src="icons/repair.svg" alt="оставить заявку">
+                    </li>
+                    <li class="header-menu__check-status">
+                        <img src="icons/checkstatus.svg" alt="статус ремонта">
                     </li>
                 </ul>
             </nav>
         </header>
         <main>
-            <header>
+            <header class="main-header">
+                <img class="main-header__divider" src="icons/highlight.svg" alt="highlight-divider">
                 <h1>Услуги и сервисы</h1>
+                <div class="main-header__desktop-area">
+                    <span class="main-header__description">Оставить заявку</span>
+                    <img src="icons/repair.svg" alt="оставить заявку">
+                    <span class="main-header__description">Статус ремонта</span>
+                    <img src="icons/checkstatus.svg" alt="статус ремонта">
+                </div>
             </header>
             <nav>
-                <ul>
+                <ul class="main-menu">
                     <li>
-                        <p>Ремонтируемые устройства</p>
+                        <a href="#" class="main-menu__link">Ремонтируемые устройства</a>
                     </li>
                     <li>
-                        <p>Дополнительные услуги</p>
+                        <a href="#" class="main-menu__link">Дополнительные услуги</a>
                     </li>
                     <li>
-                        <p>Цена на услуги</p>
+                        <a href="#" class="main-menu__link">Цена на услуги</a>
                     </li>
                     <li>
-                        <p>Адреса сервисных центров</p>
+                        <a href="#" class="main-menu__link">Адреса сервисных центров</a>
                     </li>
                     <li>
-                        <p>Специальные цены</p>
+                        <a href="#" class="main-menu__link">Специальные цены</a>
                     </li>
                     <li>
-                        <p>Отзывы</p>
+                        <a href="#" class="main-menu__link">Отзывы</a>
                     </li>
                 </ul>
             </nav>
-            <article>
-                <p>Мы являемся авторизированным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-                <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
-                <img alt="arrows down"><label>Читать далее</label>
+            <article class="main-article">
+                <div class="main-article__description">
+                    <p>Мы являемся авторизированным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+                    <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+                    <div class="main-article__more">
+                        <img src="icons/expand.svg" alt="arrows down"><span class="main-article__more-text">Читать далее</span>
+                    </div>
+                </div>
+                <img class="main-article__picture" src="icons/picture.png" alt="cps photo half-screen">
             </article>
-            <img alt="cps photo half-screen">
         </main>
     </body>
 </html>
